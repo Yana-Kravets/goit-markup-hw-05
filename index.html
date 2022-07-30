@@ -64,7 +64,7 @@
             <div class="container">
                 <h1 class="hero-title">Эффективные решения 
                     для вашего бизнеса</h1>
-                <button type="button" class="button hero-btn">Заказать услугу</button>
+                <button type="button" class="button hero-btn" data-modal-open>Заказать услугу</button>
             </div>
         </section>
 
@@ -123,15 +123,30 @@
                 <h2 class="section-title">Чем мы занимаемся</h2>
                 <ul class="list wedo-list">
                     <li class="wedo-item">
-                        <img class="wedo-img" src="./images/studio/computer.jpg" alt="Макбук на столе" width="370"
-                            height="294">
+                        <div class="wedo-thumb">
+                            <img class="wedo-img" src="./images/studio/computer.jpg" alt="Макбук на столе" width="370"
+                                height="294">
+                            <div class="wedo-actions">
+                                <p class="wedo-text">Десктопные приложения</p>
+                            </div>
+                        </div>
                     </li>
                     <li class="wedo-item">
-                        <img class="wedo-img" src="./images/studio/phone.jpg" alt="Телефон в руке" width="370" height="294">
+                        <div class="wedo-thumb">
+                            <img class="wedo-img" src="./images/studio/phone.jpg" alt="Телефон в руке" width="370" height="294">
+                            <div class="wedo-actions">
+                                <p class="wedo-text">Мобильные приложения</p>
+                            </div>
+                        </div>
                     </li>
                     <li class="wedo-item">
-                        <img class="wedo-img" src="./images/studio/tablet.jpg" alt="Планшен в руке" width="370"
+                        <div class="wedo-thumb">
+                            <img class="wedo-img" src="./images/studio/tablet.jpg" alt="Планшен в руке" width="370"
                             height="294">
+                            <div class="wedo-actions">
+                                <p class="wedo-text">Дизайнерские решения</p>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -409,6 +424,13 @@
         </div>
     </footer>
 
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" data-modal-close>Закрыть</button>
+        </div>
+    </div>
+
+<script src="./js/modal.js"></script>
 </body>
 
 </html>
