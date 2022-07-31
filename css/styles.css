@@ -1,6 +1,8 @@
 :root {
     --primary-font: "Roboto", sans-serif;
     --secondary-font: "Raleway", sans-serif;
+    --transition-dur-and-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 
     --primary-color: #212121;
     --secondary-color: #757575;
@@ -48,7 +50,7 @@ img {
 
 .link {
     text-decoration: none;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--transition-dur-and-func);
 }
 
 .link:hover,
@@ -107,7 +109,7 @@ img {
 }
 
 .nav-item {
-    position: relative;
+    
 }
 
 .nav-list .nav-item + .nav-item {
@@ -115,6 +117,7 @@ img {
 }
 
 .nav-link {
+    position: relative;
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -146,9 +149,6 @@ img {
 
 .contact-list {
     margin-left: auto;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
 }
 
 .contact-list .contact-item + .contact-item {
@@ -173,8 +173,9 @@ img {
 }
 
 .contact-link-icon {
+    transition: color 250ms var(--transition-dur-and-func);
+
     fill: var(--secondary-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-link-icon:hover,
@@ -233,7 +234,7 @@ img {
 
     background-color: var(--accent-color);
     color: var(--main-light);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color var(--transition-dur-and-func);
 }
 
 .hero-btn:hover,
@@ -278,6 +279,7 @@ img {
     justify-content: center;
     align-items: center;
     height: 120px;
+
     background-color: var(--primary-background);
 }
 
@@ -343,13 +345,15 @@ img {
     right: 0;
     width: 100%;
     height: 70px;
-    background: rgba(47, 48, 58, 0.8);
+
+    background-color: rgba(47, 48, 58, 0.8);
 }
 
 .wedo-text {
     margin-top: 0;
     margin-bottom: 0;
     padding: 27px 82px;
+
     font-weight: 700;
     line-height: 1.1;
     text-align: center;
@@ -383,7 +387,7 @@ img {
 }
 
 .team-card-wrapper {
-    /* padding: 30px 0 16px 0; */
+    
 }
 
 .team-name {
@@ -427,7 +431,7 @@ img {
     border-radius: 50%;
 
     fill: var(--icon-color);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color var(--transition-dur-and-func), fill var(--transition-dur-and-func);
 }
 
 .team-social-link:hover,
@@ -456,10 +460,11 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+
     border: 1px solid var(--icon-color);
     border-radius: 4px;
     fill: var(--icon-color);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill var(--transition-dur-and-func), border var(--transition-dur-and-func);
 }
 
 .clients-link:hover,
@@ -495,7 +500,7 @@ img {
     
     color: var(--primary-color);
     border-radius: 4px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--transition-dur-and-func), background-color var(--transition-dur-and-func), box-shadow var(--transition-dur-and-func);
 }
 
 .current-btn {
@@ -535,11 +540,12 @@ img {
 }
 
 .portfolio-link {
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow var(--transition-dur-and-func);
 }
 
 .portfolio-link:hover {
     display: block;
+
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -556,16 +562,18 @@ img {
     position: absolute;
     top: 0;
     left: 0;
+    overflow: auto;
     width: 100%;
     height: 100%;
     padding: 63px 24px;
     margin-top: 0;
     margin-bottom: 0;
+
     font-size: 18px;
     line-height: 1.6;
-    overflow: auto;
+
     transform: translate(0, 100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform var(--transition-dur-and-func);
 
     background: rgba(33, 150, 243, 0.9);
     color: var(--main-light);
@@ -656,7 +664,7 @@ img {
     
     color: var(--main-light);
     opacity: .6;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color var(--transition-dur-and-func);
 }
 
 .footer-social {
@@ -694,7 +702,7 @@ img {
 
     fill: var(--main-light);
     background: rgba(255, 255, 255, 0.1);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color var(--transition-dur-and-func);
 }
 
 .footer-social-link:hover, 
@@ -702,17 +710,23 @@ img {
     background-color: var(--accent-color);
 }
 
+/* Modal window */
+
 .backdrop {
     position: fixed;
+    z-index: 100;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2);
+
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity var(--transition-dur-and-func), visibility var(--transition-dur-and-func);
 }
 
 .backdrop.is-hidden {
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
 }
 
@@ -727,4 +741,30 @@ img {
     background: var(--main-light);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+    background-color: var(--main-light);
+    color: var(--logo-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal-close-icon {
+    transition: fill var(--transition-dur-and-func);
+}
+
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon {
+    fill: var(--accent-color);
 }
